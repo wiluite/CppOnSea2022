@@ -41,6 +41,8 @@
   <ItemDefinitionGroup>
     <ClCompile>
       <DisableSpecificWarnings>4127;5050</DisableSpecificWarnings>
+      <AdditionalBMIDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(BmiCacheDir)</AdditionalBMIDirectories>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
