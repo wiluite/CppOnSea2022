@@ -75,7 +75,6 @@ namespace winapi {
 
 namespace caboodle {
 
-
 	string utf8Path(const filesystem::path& Path) {
 		if constexpr (_WIN32)
 			return winapi::toUTF8(Path.wstring());
@@ -93,9 +92,9 @@ namespace caboodle {
 	auto parseCommandline(po::options_description& opts, po::positional_options_description& popts) -> po::variables_map
 	{
 #if defined (JUST_HELP_REQUEST)
-		char const* argv[] = { "test_app.exe", "--help" };
+	    char const * argv[] = { "test_app.exe", "--help" };
 #else
-		char const* argv[] = { "test_app.exe", "C:/media", ""};
+		char const* argv[] = { "test_app.exe", "C:/media", "127.0.0.1"};
 #endif
 
 		po::variables_map vm;
@@ -142,7 +141,7 @@ namespace caboodle {
 			println("{}", "Invalid command line! ");
 		}
 
-		if (needHelp) {
+ 		if (needHelp) {
 			try { 
 				println("{}", getHelpText(OptionsDescription));
 			} 
@@ -152,6 +151,5 @@ namespace caboodle {
 		else {
 			return Option;
 		}
-		return Option;
 	}
 } // caboodle
