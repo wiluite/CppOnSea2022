@@ -5,10 +5,6 @@
 module;
 
 #include <filesystem>
-
-//#define _EXPORT_STD
-//#include <print>
-
 #include <string>
 #include <tuple>
 #include <iostream>
@@ -99,7 +95,7 @@ namespace caboodle {
 #if defined (JUST_HELP_REQUEST)
 		char const* argv[] = { "test_app.exe", "--help" };
 #else
-		char const* argv[] = { "test_app.exe", "D:/media", ""};
+		char const* argv[] = { "test_app.exe", "C:/media", ""};
 #endif
 
 		po::variables_map vm;

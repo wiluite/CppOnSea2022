@@ -43,10 +43,13 @@
       <DisableSpecificWarnings>4127;5050</DisableSpecificWarnings>
       <AdditionalBMIDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(BmiCacheDir)</AdditionalBMIDirectories>
       <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <EnableModules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</EnableModules>
+      <RuntimeLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <AdditionalOptions>/Ignore:4199 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(BmiCacheDir)</AdditionalLibraryDirectories>
     </Link>
     <Manifest>
       <AdditionalManifestFiles>Demo-App.xml %(AdditionalManifestFiles)</AdditionalManifestFiles>
