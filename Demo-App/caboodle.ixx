@@ -94,7 +94,7 @@ namespace caboodle {
 #if defined (JUST_HELP_REQUEST)
 	    char const * argv[] = { "test_app.exe", "--help" };
 #else
-		char const* argv[] = { "test_app.exe", "C:/media", "127.0.0.1"};
+		char const* argv[] = { "test_app.exe", "C:\\media_gif", "127.0.0.1"};
 #endif
 
 		po::variables_map vm;
