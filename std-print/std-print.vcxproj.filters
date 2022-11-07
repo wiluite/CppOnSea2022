@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="boost.program_options.ixx">
+    <ClCompile Include="print.ixx">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
