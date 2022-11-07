@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32519.111
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo-App", "Demo-App\Demo-App.vcxproj", "{DF4B393A-367F-4F69-8DF8-94775EF8FB36}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libav", "libav\libav.vcxproj", "{1569001E-8080-4A44-93FF-C544C13D45F6}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libav", "libav\libav\libav.vcxproj", "{1569001E-8080-4A44-93FF-C544C13D45F6}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "boost.program_options", "boost.program_options\boost.program_options.vcxproj", "{B02D2540-5B5F-4348-BE2A-D280996ECD09}"
 EndProject
