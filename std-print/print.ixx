@@ -12,6 +12,10 @@ module;
 
 export module print;
 
+#ifdef _MSC_VER
+#	pragma comment(lib, "std-print.lib")
+#endif
+
 export namespace std{
     template <typename... _Types>
     void println(const _STD _Fmt_string<_Types...> _Fmt, _Types&&... _Args);

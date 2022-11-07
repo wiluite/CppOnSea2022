@@ -27,7 +27,6 @@ The application
 #include <cstdint>
 #include <expected>
 #include <filesystem>
-#include <print>
 #include <span>
 #include <stop_token>
 #include <string>
@@ -42,6 +41,7 @@ import net.types;
 import sdl;
 import video;
 import video.decoder;
+import print;
 
 using namespace std;         // bad practice - only for presentation!
 using namespace std::chrono; // bad practice - only for presentation!
