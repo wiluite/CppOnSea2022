@@ -34,6 +34,7 @@
   <ItemGroup>
     <ClInclude Include="c_resource.hpp" />
     <ClInclude Include="generator.hpp" />
+    <ClInclude Include="__std_expected.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Demo-App.xml" />

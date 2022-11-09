@@ -19,4 +19,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="print">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="print_format">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
