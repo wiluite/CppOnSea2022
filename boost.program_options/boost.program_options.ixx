@@ -24,12 +24,16 @@ export module boost.program_options;
 #endif
 
 
-template class boost::program_options::typed_value<int, char>;
-template class boost::program_options::typed_value<std::string, char>;
-
 namespace po = boost::program_options;
-template std::string& po::variable_value::as<std::string>();
+
+template class po::typed_value<std::string, char>; // explicit instantiation
+template class po::typed_value<int, char>; // as well
+
+// and so on whatever it is required by a client
+template std::string& po::variable_value::as<std::string>(); 
 template std::string const& po::variable_value::as<std::string>() const;
+template int& po::variable_value::as<int>();
+template int const& po::variable_value::as<int>() const;
 
 export {
 	namespace boost::program_options {
@@ -55,4 +59,13 @@ export {
 
 module :private;
 
-#include "libs/program_options/src/src.hpp"
+#include "libs/program_options/src/config_file.cpp"
+#include "libs/program_options/src/cmdline.cpp"
+#include "libs/program_options/src/options_description.cpp"
+#include "libs/program_options/src/positional_options.cpp"
+#include "libs/program_options/src/convert.cpp"
+#include "libs/program_options/src/parsers.cpp"
+#include "libs/program_options/src/variables_map.cpp"
+#include "libs/program_options/src/value_semantic.cpp"
+#include "libs/program_options/src/winmain.cpp"
+#include "libs/program_options/src/split.cpp"
