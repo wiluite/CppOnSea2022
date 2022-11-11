@@ -421,7 +421,8 @@ asio::awaitable<void> handleGUIEvents(asio::io_context & Ctx, stop_source Stop,
 }
 } // namespace
 
-int main() {
+int main(int argc, char const * argv[]) {
+	caboodle::passCommandLine(argc, argv);
 	const auto [MediaDirectory, ServerName] = caboodle::getOptions();
 	if (MediaDirectory.empty())
 		return -2;

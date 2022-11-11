@@ -17,19 +17,26 @@ namespace caboodle {
 
 	// fs::path::string() has unspecified encoding on Windows
 	// convert from UTF16 to UTF8 with guaranteed semantics
-	export std::string utf8Path(const std::filesystem::path& Path);
+	export std::string utf8Path(const std::filesystem::path & Path);
 
-	//-------------------------------------------------------------------
+//-------------------------------------------------------------------
 
 	boost::program_options::variables_map parseOptions();
 
 	export auto getOptions() {
 		const auto Option = parseOptions();
-		return std::tuple{ Option["media"].as<std::string>(),
-						   Option["server"].as<std::string>(),
+		return std::tuple{
+			Option["media"].as<std::string>(),
+			Option["server"].as<std::string>(),
 		};
 	}
-} // caboodle
+
+	int args;
+	char const ** cmd_line;
+    export void passCommandLine(int args_, char const ** argv) {
+		args = args_; cmd_line = argv;
+	}
+} // namespace caboodle
 
 module : private; // names invisible, declarations unreachable!
 
@@ -91,15 +98,8 @@ namespace caboodle {
 	namespace po = boost::program_options;
 	auto parseCommandline(po::options_description& opts, po::positional_options_description& popts) -> po::variables_map
 	{
-#if defined (JUST_HELP_REQUEST)
-	    char const * argv[] = { "test_app.exe", "--help" };
-#else
-		char const* argv[] = { "test_app.exe", "C:\\media_gif", "127.0.0.1"};
-#endif
-
 		po::variables_map vm;
-		po::store(
-			po::command_line_parser(sizeof(argv) / sizeof(argv[0]), argv)
+		po::store(po::command_line_parser(args, cmd_line)
 			.options(opts)
 			.positional(popts)
 			.run(),
