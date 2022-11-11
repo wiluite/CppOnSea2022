@@ -24,8 +24,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="print" />
-    <None Include="print_format" />
+    <None Include="__std_print" />
+    <None Include="__std_print_format" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

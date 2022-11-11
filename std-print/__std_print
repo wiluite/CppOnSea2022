@@ -4,7 +4,7 @@
 
 #include <yvals_core.h>
 
-#include "print_format"
+#include "__std_print_format"
 
 extern void __std_print_notranscode(_STD FILE *, const char *, _STD size_t);
 extern void __std_print(_STD FILE *, const char *, _STD size_t, unsigned int);

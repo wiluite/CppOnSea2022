@@ -20,10 +20,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="print">
+    <None Include="__std_print">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="print_format">
+    <None Include="__std_print_format">
       <Filter>Header Files</Filter>
     </None>
   </ItemGroup>

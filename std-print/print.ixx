@@ -1,7 +1,7 @@
 module; 
 
 #define _EXPORT_STD
-#include "print"
+#include "__std_print"
 
 #include <io.h>
 #include <malloc.h>
